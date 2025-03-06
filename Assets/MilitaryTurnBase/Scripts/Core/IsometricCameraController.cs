@@ -12,16 +12,6 @@ public class IsometricCameraController : MonoBehaviour
     
     void LateUpdate()
     {
-        // Движение камеры
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-        
-        Vector3 movement = new Vector3(horizontal, 0, vertical) * moveSpeed * Time.deltaTime;
-        transform.Translate(movement, Space.World);
-
-        // Приближение/отдаление
-        float scroll = Input.GetAxis("Mouse ScrollWheel");
-        float newSize = Camera.main.orthographicSize - scroll * zoomSpeed;
-        Camera.main.orthographicSize = Mathf.Clamp(newSize, minZoom, maxZoom);
+       
     }
 }
